@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>screen size calculator</title>
+</head>
+
+<body>
+    <div id="main">
+        <h1>Screen Size Calculator</h1>
+
+        <table>
+            <tr>
+                <td>height</td>
+                <td>:</td>
+                <td>width</td>
+            </tr>
+            <tr>
+                <td><input type="text" id="hRatio" size="5" onchange="arbitraryRatio()"></td>
+                <td>:</td>
+                <td><input type="text" id="wRatio" size="5" onchange="arbitraryRatio() "></td>
+            </tr>
+        </table>
+        <select id="selectRatio" onchange="printChange() ">
+            <option h="1080" w="1920">2K 16:9(FHD)</option>
+            <option h="1080" w="2048">2K DCI</option>
+            <option h="1200" w="1920">WUXGA</option>
+            <option h="1440" w="2560">WQHD</option>
+            <option h="1600" w="2560">WQXGA</option>
+            <option h="1920" w="3072">Macbook Pro 16inch</option>
+            <option h="1440" w="3440">WXQHD</option>
+            <option h="2160" w="3840">4K 16:9</option>
+            <option h="2160" w="4096">4K DCI</option>
+            <option h="2160" w="5120">5K2K</option>
+            <option h="2880" w="5120">5K 16:9(iMac 27inch)</option>
+            <option h="3384" w="6016">Pro Display XDR</option>
+            <option h="4320" w="7680">8K 16:9</option>
+            <option h="4320" w="8192">8K DCI</option>
+            <option h="8640" w="15360">16K</option>
+        </select>
+
+        <br>
+        <table>
+            <tr>
+                <th></th>
+                <th>inch</th>
+                <th>mm</th>
+                <th></th>
+            </tr>
+            <tr>
+                <th>height</th>
+                <td>
+                    <input type="text" id="hInch" size="5" value="" onchange="hInchCalc()">
+                </td>
+                <td>
+                    <input type="text" id="hMm" size="5" value="" onchange="hMmCalc()">
+                </td>
+            </tr>
+            <tr>
+                <th>width</th>
+                <td>
+                    <input type="text" id="wInch" size="5" value="" onchange="wInchCalc()">
+                </td>
+                <td>
+                    <input type="text" id="wMm" size="5" value="" onchange="wMmCalc()">
+                </td>
+            </tr>
+            <tr>
+                <th>diagonal</th>
+                <td>
+                    <input type="text" id="dInch" size="5" value="" onchange="dInchCalc()">
+                </td>
+                <td>
+                    <input type="text" id="dMm" size="5" value="" onchange="dMmCalc()">
+                </td>
+            </tr>
+        </table>
+        <div id="dpi">
+
+        </div>
+    </div>
+    <script type="text/javascript" src="js/main.js"></script>
+</body>
+
+</html>
