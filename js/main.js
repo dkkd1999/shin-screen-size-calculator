@@ -119,5 +119,5 @@ function printChange() {
     dInchCalc();
 }
 function printDPI() {
-    dpi.innerHTML = (hRatio / (height / 25.4)) + "dpi"
+    dpi.innerHTML = (hRatio / (height / 25.4)) + "dpi" + "<br>" + (height / hRatio) + "mm";
 }
